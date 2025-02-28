@@ -62,11 +62,11 @@ h2{
 
 }
 
-.section-two, .section-two-dates, .thanks {
+.section-two {
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    height: auto;
+    margin: 40px 0;
+    overflow: visible;
 }
 
 .date{ 
@@ -121,12 +121,13 @@ h4 {
  
 }
 
-.section-two-dates{
-    width: 100vw;
-    height: 100vh;
+.section-two-dates {
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
 }
 
 .date-title{
@@ -136,33 +137,20 @@ flex-direction: column;
 
 }
 
-.ceremony{
-width: 40vw;
-height: 90vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-font-family: 'Montserrat', sans-serif;
-font-size: 1.5rem;
-object-fit: cover;
+.ceremony, .party {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .ceremony img{
 width: 100%;
 height: 60%;
 border-radius: 25px;
-}
-
-.party {
-width: 40vw;
-height: 90vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-font-size: 1.5rem;
-object-fit: cover;
 }
 
 .party img{ 
@@ -254,7 +242,7 @@ button:active {
     align-items: center;
     justify-content: center;
     gap: 25px;
-    background-image: url('./img/fondo-horizontal.png');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -269,7 +257,6 @@ button:active {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -282,7 +269,7 @@ button:active {
 }
 
 .asistance-title h3 {
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
     font-weight: 500;
@@ -291,7 +278,7 @@ button:active {
 
 .asis-final-date,
 .card-price {
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 10px 0;
@@ -466,11 +453,13 @@ button:active {
         margin-top: 5%;
     }
     .section-two{
-        height: 120vh;
+        height: auto;
+        margin: 20px 0;
     }
     .section-two-dates{
-        width: 100%;
-        padding: 10px;
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
     }
     .time{
         display: flex;
@@ -479,14 +468,14 @@ button:active {
     }
      .time h4{
         font-size: 1.5rem;
-
+        color: #ffffff;
     }
     .date{ 
      display: flex;
      align-items: center;
      height: fit-content;
      justify-content: space-between;
-     color: rgb(255, 121, 80);
+     color: #ffffff;
     }
 
     .ceremony p{
@@ -498,8 +487,9 @@ button:active {
     }
     .ceremony, .party{
         width: 100%;
+        height: auto;
         padding: 0 15px;
-        margin: 20px 0;
+        margin: 10px 0;
     }
     .party{
         text-align: center;
@@ -512,15 +502,18 @@ button:active {
         width: 100%;
         height: auto;
     }
-    .dress-code{
-        margin: 0;
-        height: 20vh;
+    .dress-code {
+        margin: 40px 0;
+        height: auto;
+        min-height: 40vh;
+        padding: 40px 20px;
         background-color: rgb(255, 121, 80);
         color: #fff;
     }
-    .dress-code p{
+    .dress-code p {
         font-size: 1.2rem;
         font-weight: 600;
+        margin: 10px 0;
     }
 
     .dress-code-text{
@@ -528,49 +521,34 @@ button:active {
         font-weight: 200;
     }
 
-    .asistance{
-        height: 50vh;
+    .asistance {
+        min-height: 70vh;
+        height: auto;
+        padding: 60px 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-position-y: 50%;
-        background-size: 200%;
-    
+        gap: 30px;
     }
-    .asistance-title{
-        font-size: 1rem;
-        text-align: center;
+
+    .asistance-title h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
-    .asis-final-date{
+
+    .asis-final-date {
         font-size: 1.2rem;
         letter-spacing: 2px;
-        margin: 10px 0px 40px 0px;
+        margin: 20px 0;
     }
 
-    .buttons{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
+    .card-price {
+        font-size: 1.2rem;
+        margin: 20px 0;
     }
-    .asistance button{
-     font-size: 1.2rem;
-     background-color: rgb(255, 121, 80);
-     color: #fff;
-     width: 220px;
-     height: 100%;
-     border-radius: 20px;
-     text-align: center;
-     padding: 5px 5px;
 
-    }
-  
-    .thanks p{
-        font-size: 1.3rem;
-        text-align: center;
-        font-weight: 300 ;
-        padding: 5%;
+    .buttons {
+        margin-top: 30px;
     }
 }
 
@@ -591,6 +569,7 @@ button:active {
     }
     .date .time h4{
         font-size: 1.5rem;
+        color: #ffffff;
     }
     .date{
      padding-bottom: 10px;
@@ -611,16 +590,17 @@ button:active {
         width: 18vw;
         /* height: 15vh; */
     }
-    .dress-code{
+    .dress-code {
         text-align: center;
-        margin: 0;
-        padding: 0;
-        height: 30vh;
-
+        margin: 40px 0;
+        height: auto;
+        min-height: 40vh;
+        padding: 40px 20px;
     }
-    .dress-code p{
+    .dress-code p {
         font-size: 1rem;
         font-weight: 700;
+        margin: 10px 0;
     }
     .hashtag{
         padding-top: 40px;
@@ -647,25 +627,21 @@ button:active {
         font-size: 1.5rem;
         font-weight: 500;
     }
-    .asistance{
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-position-y: 10%;
-    
+    .asistance {
+        min-height: 80vh;
+        height: auto;
+        padding: 50px 15px;
+        gap: 25px;
     }
-    .asistance-title{
-        font-size: 1rem;
-        text-align: center;
+
+    .asistance-title h3 {
+        font-size: 1.3rem;
     }
-    .asistance .asis-final-date{
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-    .asis-price{
-    font-size: 0.8rem;
-    text-align: center;
+
+    .asis-final-date,
+    .card-price {
+        font-size: 1.1rem;
+        margin: 15px 0;
     }
 
     .buttons{
