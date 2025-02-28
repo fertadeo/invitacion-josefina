@@ -445,14 +445,15 @@ button:active {
 }
 
 }
-
+/* movil */
 @media (max-width: 450px) {
     .portrait {
-        background-position: 25% center;
+        background-position: 75% center;
     }
     .portrait .main-title h1, h2{
-        font-size: 3rem;
+        font-size: 4rem;
         margin-top: 5%;
+        border: red 1px solid;
     }
     .section-two{
         height: auto;
