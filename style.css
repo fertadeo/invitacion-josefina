@@ -25,7 +25,7 @@ html, body {
     justify-content: center;
     background-image: url("./img/portada.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: 15% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -326,8 +326,10 @@ button:active {
     height: 100vh;
     background-image: url("./img/portada.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: 20% center;
     background-attachment: scroll;
+    background-repeat: no-repeat;
+    left:
 }
 .portrait .main-title h1, h2{
     font-size: 5rem;
@@ -449,7 +451,7 @@ button:active {
         background-position: 25% center;
     }
     .portrait .main-title h1, h2{
-        font-size: 5rem;
+        font-size: 3rem;
         margin-top: 5%;
     }
     .section-two{
@@ -554,7 +556,7 @@ button:active {
 
 @media (max-width: 380px) {
     .portrait {
-        background-position: 20% center;
+        background-position: 30% center;
     }
     .portrait .main-title h1, h2{
         font-size: 2.5rem;
