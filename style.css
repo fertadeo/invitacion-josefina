@@ -1,0 +1,1066 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html body{
+    overflow-x: hidden;
+}
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.portrait{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/portada.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-title{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-title h1{
+    display: flex;
+    font-family: 'Dancing Script', cursive;
+    font-size: 8rem;
+    font-weight: 400;
+}
+
+h2{
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 9rem;
+    font-weight: 700;
+    text-align: 15%;
+    padding-bottom: 5%;
+}
+
+.portrait h3{
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.section-two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 80px 0;
+}
+
+.date{ 
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+    background-color: rgb(233, 144, 117);
+
+}
+
+.time{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+}
+
+.time h4 {
+    display: flex;
+    flex-direction: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.time small {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+h4 {
+ display: flex;
+ flex-direction: center;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 500;
+ font-size: 2.5rem;
+ 
+}
+
+.section-two-dates{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.date-title{
+color: rgb(233, 144, 117);
+font-size: 3rem;
+flex-direction: column;
+
+}
+
+.ceremony{
+width: 40vw;
+height: 90vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.5rem;
+object-fit: cover;
+}
+
+.ceremony img{
+width: 100%;
+height: 60%;
+border-radius: 25px;
+}
+
+.party {
+width: 40vw;
+height: 90vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+font-size: 1.5rem;
+object-fit: cover;
+}
+
+.party img{ 
+ width: 100%;
+ height: 60%;
+ object-fit: cover;
+ border-radius: 25px;
+}
+
+button {
+    width: auto;
+    min-width: 220px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(233, 144, 117);
+    background-color: transparent;
+    border: 2px solid rgb(233, 144, 117);
+    border-radius: 30px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+button:hover {
+    background: transparent;
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Ajuste específico para los botones en la sección de asistencia */
+.asistance button {
+    background-color: rgb(255, 121, 80);
+    color: white;
+    border: 2px solid white;
+    margin: 10px 0;
+}
+
+.asistance button:hover {
+    background-color: white;
+    color: rgb(255, 121, 80);
+    border-color: white;
+}
+
+.dress-code {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgb(233, 144, 117);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 5px;
+    font-size: 1.4rem;
+    margin: 60px 0px 120px 0px;
+    padding: 20px 0 60px 0;
+    gap: 10px;
+}
+
+.dress-code-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    filter: brightness(0) invert(1);
+    margin-top: -10px;
+}
+
+.dress-code p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.asistance {
+    width: auto;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-image: url('./img/fondo-horizontal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 60px 20px;
+}
+
+.asistance::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.asistance > * {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.asistance-title h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.asis-final-date,
+.card-price {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button {
+    background-color: rgb(233, 144, 117);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.buttons button:hover {
+    background-color: rgb(233, 144, 117, 0.9);
+}
+
+.thanks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(255, 121, 80);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 80px 5%;
+    text-align: center;
+    margin: 80px 0;
+}
+@media  (max-width: 767px) {
+   
+
+.portrait{
+    height: 100vh;
+    background-image: url("./img/foto3-Photoroom.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+.portrait .main-title h1, h2{
+    font-size: 5rem;
+    margin-top: 5%;
+}
+.section-two{
+    height: 120vh;
+}
+.section-two-dates{
+    display: flex;
+    flex-direction: column;
+   
+}
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .time h4{
+    font-size: 1.5rem;
+
+}
+.date{ 
+ display: flex;
+ align-items: center;
+ height: fit-content;
+ justify-content: space-between;
+ color: rgb(255, 121, 80);
+}
+
+.ceremony p{
+    padding: 10%;
+}
+.ceremony img{
+    width: 80%;
+    height: 100%;
+}
+.ceremony, .party{
+    width: 60%;
+    font-size: 1.2rem;
+    margin: 5% 0%;
+}
+.party{
+    text-align: center;
+    width: 60%;
+}
+.party p{
+    padding: 10%;
+}
+.party img{
+    width: 80%;
+    height: 50%;
+}
+.dress-code{
+    margin: 0;
+    height: 20vh;
+    background-color: rgb(255, 121, 80);
+    color: #fff;
+}
+.dress-code p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.dress-code-text{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.asistance{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position-y: 50%;
+    background-size: 200%;
+
+}
+.asistance-title{
+    font-size: 1rem;
+    text-align: center;
+}
+.asis-final-date{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 10px 0px 40px 0px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.asistance button{
+ font-size: 1.2rem;
+ background-color: rgb(255, 121, 80);
+ color: #fff;
+ width: 220px;
+ height: 100%;
+ border-radius: 20px;
+ text-align: center;
+ padding: 5px 5px;
+
+}
+
+.thanks p{
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 300 ;
+    padding: 5%;
+}
+
+}
+
+@media (max-width: 450px) {
+
+
+.portrait{
+    height: 100vh;
+    background-image: url("./img/portada.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+    .portrait .main-title h1, h2{
+        font-size: 5rem;
+        margin-top: 5%;
+    }
+    .section-two{
+        height: 120vh;
+    }
+    .section-two-dates{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .time{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+     .time h4{
+        font-size: 1.5rem;
+
+    }
+    .date{ 
+     display: flex;
+     align-items: center;
+     height: fit-content;
+     justify-content: space-between;
+     color: rgb(255, 121, 80);
+    }
+
+    .ceremony p{
+        padding: 10%;
+    }
+    .ceremony img{
+        width: 80%;
+        height: 100%;
+    }
+    .ceremony, .party{
+        width: 60%;
+        font-size: 1.2rem;
+        margin: 5% 0%;
+    }
+    .party{
+        text-align: center;
+        width: 60%;
+    }
+    .party p{
+        padding: 10%;
+    }
+    .party img{
+        width: 80%;
+        height: 50%;
+    }
+    .dress-code{
+        margin: 0;
+        height: 20vh;
+        background-color: rgb(255, 121, 80);
+        color: #fff;
+    }
+    .dress-code p{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .dress-code-text{
+        font-size: 1.3rem;
+        font-weight: 200;
+    }
+
+    .asistance{
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position-y: 50%;
+        background-size: 200%;
+    
+    }
+    .asistance-title{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .asis-final-date{
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin: 10px 0px 40px 0px;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .asistance button{
+     font-size: 1.2rem;
+     background-color: rgb(255, 121, 80);
+     color: #fff;
+     width: 220px;
+     height: 100%;
+     border-radius: 20px;
+     text-align: center;
+     padding: 5px 5px;
+
+    }
+  
+    .thanks p{
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 300 ;
+        padding: 5%;
+    }
+}
+
+@media (max-width: 380px) {
+    .portrait{
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+    .portrait .main-title h1, h2{
+        font-size: 2.5rem;
+    }
+    .portrait h3{
+        font-size: 1rem;
+    }
+    .section-two-dates{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .date .time h4{
+        font-size: 1.5rem;
+    }
+    .date{
+     padding-bottom: 10px;
+    }
+
+    .ceremony img{
+        width: 18vw;
+    }
+    .ceremony, .party{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .party{
+        text-align: center;
+        width: 100%;
+    }
+    .party img{
+        width: 18vw;
+        /* height: 15vh; */
+    }
+    .dress-code{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 30vh;
+
+    }
+    .dress-code p{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .hashtag{
+        padding-top: 40px;
+        text-align: center;
+        height: 80%;
+    }
+    .hashtag img{
+        margin-top: 0;
+        width: 30%;
+        height: 30%;
+    }
+    .hashtag .first, .sec, .thr{
+        margin-top: 5%;
+        text-align: center;
+    }
+    .first{
+        font-size: 1rem;
+    }
+    .sec{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .thr{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .asistance{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position-y: 10%;
+    
+    }
+    .asistance-title{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .asistance .asis-final-date{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .asis-price{
+    font-size: 0.8rem;
+    text-align: center;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .buttons button{
+     font-size: 0.7rem;
+     width: 80%;
+     height: 30%;
+     border-radius: 5px;
+     text-align: center;
+    }
+
+    .buttons .sec{
+        margin: 0;
+        margin-left: 10px;
+    }
+    .thanks p{
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 300 ;
+    }
+}
+
+.music-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(255, 121, 80);
+    width: 80px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: pulseButton 1s ease-in-out infinite;
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.music-icon i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.music-icon i.fa-music {
+    font-size: 16px;
+}
+
+.music-icon:hover {
+    transform: scale(1.1);
+    background-color: rgb(212, 139, 117);;
+}
+
+.music-icon.playing {
+    animation: none;
+    transform: scale(1);
+}
+
+.gallery {
+    width: 100%;
+    padding: 80px 5%;
+    margin: 80px 0;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    aspect-ratio: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: 1001;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Aseguramos que el body no tenga márgenes cuando el modal está abierto */
+body.modal-open {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+.modal-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.modal-arrow.left {
+    left: 30px;
+}
+
+.modal-arrow.right {
+    right: 30px;
+}
+
+.modal-arrow i {
+    color: white;
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .modal-arrow {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .modal-arrow i {
+        font-size: 30px;
+    }
+}
+
+.card-price {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.payment-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close-payment-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+    padding: 0 8px;
+}
+
+.payment-details {
+    margin: 25px 0;
+    text-align: left;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.payment-details p {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.payment-instructions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-instructions p {
+    margin: 0;
+    color: #333;
+}
+
+.payment-content h3 {
+    color: rgb(233, 144, 117);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.copy-button {
+    background: none;
+    border: none;
+    color: rgb(233, 144, 117);
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.copy-button:hover {
+    background: transparent;
+    transform: scale(1.1);
+}
+
+.copy-text {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.payment-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.whatsapp-button {
+    background-color: #25D366 !important; /* Color de WhatsApp */
+    border: none !important;
+    color: white !important;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E !important; /* Color más oscuro al hover */
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+}
+
+/* Estilos específicos para los botones del modal de pago */
+.payment-instructions button:hover {
+    background-color: rgb(233, 144, 117);
+}
+
+.gift-section {
+    background-color: rgb(233, 144, 117, 0.15);
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.gift-icon img {
+    width: 60px;
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.gift-text {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.gift-text p {
+    margin: 10px 0;
+}
+
+.gift-text p:first-child {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.gift-button button {
+    background-color: rgb(233, 144, 117);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.gift-button button:hover {
+    background-color: rgb(233, 144, 117, 0.9);
+}
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title> Josefina | Mis 15 años </title>
+    <style>
+        /* Estilos existentes... */
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px; /* Ajustar el tamaño de fuente para móviles */
+            }
+            .invitacion {
+                padding: 10px; /* Ajustar el padding */
+                margin: 0; /* Eliminar márgenes innecesarios */
+            }
+            /* Otros estilos específicos para móviles */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Portada y seccion principal -->
+<div class="portrait">
+    <div class="main-title">
+      
+        <h1> Josefina </h1>
+    </div>
+</div>
+
+<!-- Cuenta Regresiva -->
+<div id="countdown" class="date">    
+<div class="time">
+ <h4 id="days"> 00 </h4>  
+ <small> Días </small>
+</div>
+
+  <div class="time">
+   <h4 id="hours"> 00 </h4>  
+    <small> Horas </small>
+  </div>
+
+  <div class="time">
+    <h4 id="minutes"> 00 </h4>  
+    <small> Minutos </small>
+  </div>
+
+ <div class="time">
+  <h4 id="seconds"> 00 </h4>  
+  <small> Segundos </small>
+ </div>
+
+</div>
+
+<!--  Ubicaciones -->
+ <section class="section-two"> 
+    <div class="section-two-dates">
+        <div class="ceremony">
+            <img src="./img/parroquia.jpg" alt="">
+            <p>La ceremonia religiosa se llevará a cabo en la Capilla Santa Rita, ubicada en Barrio Antártida 1, Calle Isla de los Estados, el día 2 de Marzo de 2025 a las 20:00 hs.</p>
+          <a href="https://www.google.com/maps/place/Iglesia+Santa+Rita/@-29.4176752,-66.8847249,14z/data=!4m10!1m2!2m1!1sIglesia+Santa+Rita!3m6!1s0x9427da610b46e25d:0x22b71483df6aad58!8m2!3d-29.3898948!4d-66.828684!15sChJJZ2xlc2lhIFNhbnRhIFJpdGGSAQZjaHVyY2jgAQA!16s%2Fg%2F11c1s19rxl?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">  <button> Llegar a la misa </button> </a>
+        </div>
+        <div class="party">
+
+            <img src="./img/salon.jpg" alt="">
+            <p>Te espero en La Estancia "Las Margaritas", ubicada en Ruta 38, Calle Bartolomé Mitre, a las 21hs para la recepción.</p>
+            <a href="https://www.google.com/maps/place/Estancia+Las+Margaritas/@-29.435169,-66.8359265,17z/data=!3m1!4b1!4m6!3m5!1s0x9427d98b4ec86979:0x116bdacc8ea3238b!8m2!3d-29.4351737!4d-66.8333516!16s%2Fg%2F11c5s5lwj3?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">  <button> Llegar a la fiesta </button> </a>
+        </div>
+    </div>
+</section>
+
+<!-- Después de la sección de lugares y antes del dress code -->
+<section class="gallery">
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="./img/foto1.jpeg" alt="Foto 1" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="./img/foto2.jpeg" alt="Foto 2" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="./img/foto3.jpeg" alt="Foto 3" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="./img/foto4.jpeg" alt="Foto 4" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="./img/foto5.jpeg" alt="Foto 5" onclick="openModal(this.src)">
+        </div>
+        <div class="gallery-item">
+            <img src="./img/foto3-Photoroom.jpg" alt="Foto 6" onclick="openModal(this.src)">
+        </div>
+    </div>
+
+    <!-- El modal debe tener display: none inicialmente -->
+    <div id="imageModal" class="image-modal" style="display: none;">
+        <button class="modal-arrow left" onclick="changeImage(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+        <button class="modal-arrow right" onclick="changeImage(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
+
+<!-- Dress Code  -->
+<section class="dress-code">
+    <img src="./img/icono-dresscode.svg" alt="Dress Code Icon" class="dress-code-icon">
+    <p> CÓDIGO DE VESTIMENTA  </p>
+    <p class="dress-code-text">  Elegante Sport </p>
+</section> 
+
+-- Confirmar asistencia -->
+ <section class="asistance">
+    <div class="asistance-title">
+        <h3> Confirmar asistencia </h3>
+    </div>
+
+    <p class="asis-final-date"> Hasta el 10 de Marzo </p>
+    <p class="card-price">Valor de la tarjeta: $30.000</p>
+    <div class="buttons">
+
+       <a href="https://docs.google.com/forms/d/1IwF-3vJee4IYJNxh-vOO_VT6efA7dqveyG39WvAj2rE/edit" target="_blank"> <button>  Confirmar Asistencia </button>  </a> 
+    
+           </div>
+       </div>
+    </div>
+</section><!
+
+<!-- Regalo -->
+<section class="gift-section">
+    <div class="gift-icon">
+        <img src="./img/icono-regalo.svg" alt="Ícono Regalo">
+    </div>
+    <div class="gift-text">
+        <p>El mejor regalo es que vengas,</p>
+        <p>pero si deseás regalarme algo, podés colaborar con mis sueños y anhelos✨</p>
+        <p>¡Muchas gracias!</p>
+    </div>
+    <div class="gift-button">
+        <button onclick="openPaymentModal()">HACER UN REGALO</button>
+    </div>
+</section>
+
+<!-- Agradecimiento -->
+ <section class="thanks">
+     <p> "Que estos 15 años que hoy comienzo a vivir y de los cuales no me olvidaré jamás, sean el despertar de un largo y dulce camino por la vida. <br> Será un placer compartir contigo este feliz acontecimiento.  " </p>
+ </section> 
+
+<div class="music-icon" id="musicToggle">
+    <i class="fas fa-play"></i>
+    <i class="fas fa-music"></i>
+</div>
+<audio id="bgMusic" loop>
+    <source src="./music/photograph.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<!-- Añade esto después del section.asistance -->
+<div id="paymentModal" class="payment-modal" style="display: none;">
+    <div class="payment-content">
+        <button class="close-payment-modal">×</button>
+        <h3>Información de Pago</h3>
+        <div class="payment-details">
+            <p><strong>Titular:</strong> Nieto Yanina Gisela Noemi</p>
+            <p><strong>Banco:</strong> Banco Nación</p>
+            <p><strong>Alias:</strong> <span class="copy-text">yaninagiselanieto</span> 
+                <button class="copy-button" onclick="copyToClipboard('yaninagiselanieto')">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </p>
+            <p><strong>CBU:</strong> <span class="copy-text">0110325830032564972915</span>
+                <button class="copy-button" onclick="copyToClipboard('0110325830032564972915')">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </p>
+            <p><strong>Valor:</strong> $30.000</p>
+        </div>
+        <div class="payment-instructions">
+            <p>Una vez realizado el pago:</p>
+            <p>1. Enviar comprobante al WhatsApp</p>
+            <a href="https://wa.me/543804384354" target="_blank">
+                <button class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> Enviar Comprobante
+                </button>
+            </a>
+            <p>2. Completar el formulario de asistencia</p>
+            <a href="https://docs.google.com/forms/d/1j2EjAt7YDrHKglYlLU0Bx1nc0EdcPV5auABBhdV3JPw/" target="_blank">
+                <button>Ir al formulario</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
