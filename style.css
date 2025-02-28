@@ -324,7 +324,7 @@ button:active {
 
 .portrait{
     height: 100vh;
-    background-image: url("./img/foto3-Photoroom.jpg");
+    background-image: url("./img/portada.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
