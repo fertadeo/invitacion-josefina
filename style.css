@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
-html body{
+html, body {
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
@@ -58,13 +62,11 @@ h2{
 
 }
 
-.section-two{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    margin: 80px 0;
+.section-two, .section-two-dates, .thanks {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .date{ 
@@ -473,9 +475,8 @@ button:active {
         height: 120vh;
     }
     .section-two-dates{
-        display: flex;
-        flex-direction: column;
-       
+        width: 100%;
+        padding: 10px;
     }
     .time{
         display: flex;
@@ -498,24 +499,24 @@ button:active {
         padding: 10%;
     }
     .ceremony img{
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
     .ceremony, .party{
-        width: 60%;
-        font-size: 1.2rem;
-        margin: 5% 0%;
+        width: 100%;
+        padding: 0 15px;
+        margin: 20px 0;
     }
     .party{
         text-align: center;
-        width: 60%;
+        width: 100%;
     }
     .party p{
         padding: 10%;
     }
     .party img{
-        width: 80%;
-        height: 50%;
+        width: 100%;
+        height: auto;
     }
     .dress-code{
         margin: 0;
@@ -1062,5 +1063,108 @@ body.modal-open {
 
 .gift-button button:hover {
     background-color: rgb(233, 144, 117, 0.9);
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    /* General adjustments */
+    section, div {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Countdown section */
+    #countdown {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .time {
+        padding: 0 5px;
+    }
+    
+    /* Locations */
+    .section-two-dates {
+        flex-direction: column;
+    }
+    
+    .ceremony, .party {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Gallery */
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    /* Image modal */
+    #imageModal {
+        width: 100%;
+    }
+    
+    #modalImage {
+        max-width: 90%;
+    }
+    
+    /* Payment modal */
+    .payment-content {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    /* Buttons */
+    button {
+        max-width: 100%;
+    }
+}
+
+/* Media queries for smaller screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .time h4 {
+        font-size: 18px;
+    }
+    
+    .time small {
+        font-size: 12px;
+    }
+}
+
+/* Ajustes específicos para dispositivos alrededor de 410px */
+@media (max-width: 410px) {
+    /* Refinamientos adicionales para dispositivos más pequeños */
+    .time {
+        padding: 5px 2px;
+        width: auto;
+        height: auto;
+    }
+    
+    .time h4 {
+        font-size: 1.2rem;
+    }
+    
+    .time small {
+        font-size: 0.8rem;
+    }
+    
+    /* Asegurar que modal de imágenes no cause scroll */
+    .image-modal {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    /* Ajustar botones para que no se desborden */
+    button {
+        width: auto;
+        min-width: 180px;
+        max-width: 90%;
+        white-space: normal; /* Permitir que el texto se ajuste en múltiples líneas */
+    }
 }
 
