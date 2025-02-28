@@ -458,15 +458,9 @@ button:active {
 }
 
 @media (max-width: 450px) {
-
-
-.portrait{
-    height: 100vh;
-    background-image: url("./img/portada.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-}
+    .portrait {
+        background-position: 25% center;
+    }
     .portrait .main-title h1, h2{
         font-size: 5rem;
         margin-top: 5%;
@@ -581,11 +575,8 @@ button:active {
 }
 
 @media (max-width: 380px) {
-    .portrait{
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
+    .portrait {
+        background-position: 20% center;
     }
     .portrait .main-title h1, h2{
         font-size: 2.5rem;
@@ -1137,6 +1128,9 @@ body.modal-open {
 
 /* Ajustes específicos para dispositivos alrededor de 410px */
 @media (max-width: 410px) {
+    .portrait {
+        background-position: 25% center;
+    }
     /* Refinamientos adicionales para dispositivos más pequeños */
     .time {
         padding: 5px 2px;
