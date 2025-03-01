@@ -125,9 +125,8 @@ h4 {
     width: 100%;
     height: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .date-title{
@@ -138,26 +137,26 @@ flex-direction: column;
 }
 
 .ceremony, .party {
-    width: 40%;
-    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
 }
 
-.ceremony img{
-width: 100%;
-height: 60%;
-border-radius: 25px;
+.ceremony img, .party img {
+    width: 100%;
+    height: 300px; /* Altura fija para ambas imágenes */
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-.party img{ 
- width: 100%;
- height: 60%;
- object-fit: cover;
- border-radius: 25px;
+.ceremony p{
+    padding: 10%;
+}
+
+.party p{
+    padding: 10%;
 }
 
 button {
@@ -230,8 +229,13 @@ button:active {
 }
 
 .dress-code p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     font-weight: 600;
+    text-align: center;
+    width: 100%;
 }
 
 .asistance {
@@ -341,7 +345,7 @@ button:active {
 .section-two-dates{
     display: flex;
     flex-direction: column;
-   
+    gap: 30px;
 }
 .time{
     display: flex;
@@ -355,9 +359,10 @@ button:active {
 .date{ 
  display: flex;
  align-items: center;
- height: fit-content;
+ height: 70vh;
  justify-content: space-between;
  color: rgb(255, 121, 80);
+ padding: 40px 0;
 }
 
 .ceremony p{
@@ -472,16 +477,17 @@ button:active {
         
     }
      .time h4{
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #ffffff;
         font-weight: 600;
     }
     .date{ 
      display: flex;
      align-items: center;
-     height: fit-content;
+     height: 20vh;
      justify-content: space-between;
      color: #ffffff;
+     padding: 30px 0;
     }
 
     .ceremony p{
@@ -732,20 +738,20 @@ button:active {
 
 .gallery {
     width: 100%;
-    padding: 40px 5%;
+    padding: 10px;
 }
 
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 5px;
+    gap: 4px;
+    padding: 0;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 15px;
     aspect-ratio: 1;
 }
 
@@ -810,20 +816,38 @@ body.modal-open {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .gallery {
+        padding: 8px;
+    }
+    
     .gallery-container {
-        gap: 15px;
-        padding: 15px;
+        gap: 4px;
+    }
+    
+    .ceremony img, .party img {
+        height: 250px; /* Altura ajustada para tablets */
     }
 }
 
 @media (max-width: 480px) {
+    .gallery {
+        padding: 5px;
+    }
+    
     .gallery-container {
-        gap: 10px;
-        padding: 10px;
+        gap: 4px;
     }
     
     .gallery-item {
         border-radius: 15px;
+    }
+    .ceremony img, .party img {
+        height: 200px; /* Altura ajustada para móviles */
+        border-radius: 10px;
+    }
+    
+    .section-two-dates {
+        gap: 20px;
     }
 }
 
@@ -1186,6 +1210,24 @@ body.modal-open {
     .countdown-title {
         font-size: 1.2rem;
         padding: 20px 10px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .dress-code p {
+        text-align: center;
+        padding: 0 15px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .dress-code p {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
     }
 }
 
