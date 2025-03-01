@@ -24,10 +24,10 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     padding-top: 25vh;
-    background-image: url("./img/portada.jpeg");
+    background-image: url("./img/background-brillos.jpg");
     background-size: cover;
     background-position: 10% center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 
@@ -107,7 +107,7 @@ h2{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 8rem;
     margin-bottom: 5px;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -339,10 +339,10 @@ button:active {
 .portrait{
     padding-top: 20vh;
     background-position: 85% 60%;
-    background-size: 200% auto;
+    background-size: 100% auto;
 }
 .portrait .main-title h1, h2{
-    font-size: 5rem;
+    font-size: 6rem;
     margin-top: 5%;
  
     border: none;
@@ -466,9 +466,12 @@ button:active {
         background-size: 280% auto;
     }
     .portrait .main-title h1, h2{
-        font-size: 4rem;
+        font-size: 6rem;
         margin-top: 5%;
         border: none;
+    }
+    .portrait .main-title h1{
+        top: 200px;
     }
     .section-two{
         height: auto;
@@ -1384,7 +1387,7 @@ p strong {
 .main-title h1{
     display: flex;
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-size: 8rem;
     font-weight: 400;
     position: absolute;
     top: 150px;
@@ -1396,10 +1399,10 @@ p strong {
 .main-title h2{
     display: flex;
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 400;
     position: absolute;
-    top: 100px;
+    top: 360px;
     font-size: xxx-large;
     
 }
@@ -1464,8 +1467,8 @@ p strong {
 
 @media (max-width: 410px) {
     .portrait {
-        background-position: 98% 25%;
-        background-size: 230% auto;
+       
+        background-size: 100% auto;
         
     }
 }
@@ -1515,7 +1518,7 @@ p strong {
 @media (max-width: 480px) {
     .main-title h2 {
         margin-top: 15px;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
