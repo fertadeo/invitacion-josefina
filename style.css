@@ -448,7 +448,7 @@ button:active {
 /* movil */
 @media (max-width: 450px) {
     .portrait {
-        background-position: 75% center;
+        background-position: 100% center;
     }
     .portrait .main-title h1, h2{
         font-size: 4rem;
