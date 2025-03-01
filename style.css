@@ -25,7 +25,7 @@ html, body {
     justify-content: center;
     background-image: url("./img/portada.jpeg");
     background-size: cover;
-    background-position: 15% center;
+    background-position: 0% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -326,7 +326,7 @@ button:active {
     height: 100vh;
     background-image: url("./img/portada.jpeg");
     background-size: cover;
-    background-position: 20% center;
+    background-position: 15% center;
     background-attachment: scroll;
     background-repeat: no-repeat;
     left:
@@ -448,12 +448,12 @@ button:active {
 /* movil */
 @media (max-width: 450px) {
     .portrait {
-        background-position: 100% center;
+        background-position: 10% right;
     }
     .portrait .main-title h1, h2{
         font-size: 4rem;
         margin-top: 5%;
-        border: red 1px solid;
+        border:  1px solid;
     }
     .section-two{
         height: auto;
@@ -468,10 +468,13 @@ button:active {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 30px;
+        
     }
      .time h4{
         font-size: 1.5rem;
         color: #ffffff;
+        font-weight: 600;
     }
     .date{ 
      display: flex;
@@ -485,7 +488,7 @@ button:active {
         padding: 10%;
     }
     .ceremony img{
-        width: 100%;
+        width: 80%;
         height: auto;
     }
     .ceremony, .party{
@@ -502,8 +505,13 @@ button:active {
         padding: 10%;
     }
     .party img{
-        width: 100%;
+        width: 80%;
         height: auto;
+    }
+
+    .party, .ceremony button{
+        width: 80%;
+        font-size: 1rem;
     }
     .dress-code {
         margin: 40px 0;
@@ -557,7 +565,7 @@ button:active {
 
 @media (max-width: 380px) {
     .portrait {
-        background-position: 30% center;
+        background-position: 25% center;
     }
     .portrait .main-title h1, h2{
         font-size: 2.5rem;
@@ -724,21 +732,20 @@ button:active {
 
 .gallery {
     width: 100%;
-    padding: 80px 5%;
-    margin: 80px 0;
+    padding: 40px 5%;
 }
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 20px;
     aspect-ratio: 1;
 }
 
@@ -747,9 +754,6 @@ button:active {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
 }
 
 .gallery-item img:hover {
@@ -807,7 +811,6 @@ body.modal-open {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
         padding: 15px;
     }
@@ -815,9 +818,12 @@ body.modal-open {
 
 @media (max-width: 480px) {
     .gallery-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 10px;
         padding: 10px;
+    }
+    
+    .gallery-item {
+        border-radius: 15px;
     }
 }
 
@@ -837,11 +843,11 @@ body.modal-open {
 }
 
 .modal-arrow.left {
-    left: 30px;
+    left: 20px;
 }
 
 .modal-arrow.right {
-    right: 30px;
+    right: 20px;
 }
 
 .modal-arrow i {
@@ -855,8 +861,26 @@ body.modal-open {
         height: 45px;
     }
     
+    .modal-arrow.left {
+        left: 5px;
+    }
+    
+    .modal-arrow.right {
+        right: 5px;
+    }
+    
     .modal-arrow i {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-arrow.left {
+        left: 0px;
+    }
+    
+    .modal-arrow.right {
+        right: 0px;
     }
 }
 
@@ -1138,6 +1162,30 @@ body.modal-open {
         min-width: 180px;
         max-width: 90%;
         white-space: normal; /* Permitir que el texto se ajuste en múltiples líneas */
+    }
+}
+
+.countdown-title {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: rgb(233, 144, 117);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .countdown-title {
+        font-size: 1.5rem;
+        padding: 30px 15px 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .countdown-title {
+        font-size: 1.2rem;
+        padding: 20px 10px 10px;
     }
 }
 
