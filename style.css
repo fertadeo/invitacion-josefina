@@ -48,7 +48,7 @@ html, body {
 .main-title h2{
     display: flex;
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 400;
     color: white;
     margin-top: 30px;
@@ -84,7 +84,7 @@ h2{
     width: 100%;
     height: 20%;
     align-items: center;
-    justify-content: space-around;
+ 
     color: #ffffff;
     background-color: rgb(233, 144, 117);
 
@@ -255,7 +255,7 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+
 
     background-size: cover;
     background-position: center;
@@ -300,6 +300,7 @@ button:active {
 
 .buttons {
     margin-top: 15px;
+    text-wrap: nowrap;
 }
 
 .buttons button {
@@ -313,6 +314,8 @@ button:active {
     cursor: pointer;
     transition: background-color 0.3s ease;
     letter-spacing: 2px;
+   
+    
 }
 
 .buttons button:hover {
@@ -328,7 +331,7 @@ button:active {
     background-color: rgb(233, 144, 117);
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 80px 5%;
     text-align: center;
    
@@ -368,7 +371,7 @@ button:active {
  display: flex;
  align-items: center;
  height: 70vh;
- justify-content: space-between;
+ /* justify-content: space-between; */
  color: rgb(255, 121, 80);
  padding: 40px 0;
 }
@@ -498,7 +501,7 @@ button:active {
      display: flex;
      align-items: center;
      height: 20vh;
-     justify-content: space-between;
+     /* justify-content: space-between; */
      color: #ffffff;
      padding: 30px 0;
     }
@@ -834,6 +837,13 @@ body.modal-open {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+
+.date{
+    display: flex;
+    align-items: center;
+}
+
     .gallery {
         padding: 8px;
     }
@@ -1208,12 +1218,15 @@ p strong {
     
     /* Countdown section */
     #countdown {
+     
         width: 100%;
         display: flex;
-        justify-content: space-between;
+       justify-content: center;
     }
     
     .time {
+        font-size: 1.5rem;
+
         padding: 0 5px;
     }
     
@@ -1260,16 +1273,6 @@ p strong {
     }
 }
 
-/* Media queries for smaller screens (iPhone SE, etc.) */
-@media (max-width: 375px) {
-    .time h4 {
-        font-size: 18px;
-    }
-    
-    .time small {
-        font-size: 12px;
-    }
-}
 
 /* Ajustes específicos para dispositivos alrededor de 410px */
 @media (max-width: 420px) {
@@ -1282,15 +1285,55 @@ p strong {
         width: auto;
         height: auto;
     }
+
+    .buttons button {
+        background-color: rgb(233, 144, 117);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        letter-spacing: 2px;
+        text-wrap: auto;
+       
+        
+    }
     
     .time h4 {
-        font-size: 1.2rem;
+        font-size: rem;
     }
     
     .time small {
         font-size: 0.8rem;
     }
-    
+
+    .section-two {
+        padding-top: 5%;
+    }
+
+    .ceremony {
+    font-size: medium;
+    margin: 0 auto;
+    /* color: #333; */
+    font-family: 'Montserrat', sans-serif;
+
+    .dress-code {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .asistance{
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-price p{
+        padding: 0;
+        margin: 0;
+    }
     /* Asegurar que modal de imágenes no cause scroll */
     .image-modal {
         width: 100%;
