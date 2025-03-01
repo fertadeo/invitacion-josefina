@@ -25,7 +25,7 @@ html, body {
     justify-content: center;
     background-image: url("./img/portada.jpeg");
     background-size: cover;
-    background-position: 0% center;
+    background-position: 10% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -327,13 +327,8 @@ button:active {
    
 
 .portrait{
-    height: 100vh;
-    background-image: url("./img/portada.jpeg");
-    background-size: cover;
-    background-position: 15% center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    left:
+    background-position: 85% center;
+    background-size: 200% auto;
 }
 .portrait .main-title h1, h2{
     font-size: 5rem;
@@ -453,7 +448,8 @@ button:active {
 /* movil */
 @media (max-width: 450px) {
     .portrait {
-        background-position: 10% right;
+        background-position: 90% center;
+        background-size: 250% auto;
     }
     .portrait .main-title h1, h2{
         font-size: 4rem;
@@ -571,7 +567,8 @@ button:active {
 
 @media (max-width: 380px) {
     .portrait {
-        background-position: 25% center;
+        background-position: 95% center;
+        background-size: 280% auto;
     }
     .portrait .main-title h1, h2{
         font-size: 2.5rem;
@@ -985,33 +982,88 @@ body.modal-open {
     margin-bottom: 20px;
 }
 
-.copy-button {
-    background: none;
-    border: none;
-    color: rgb(233, 144, 117);
-    cursor: pointer;
-    padding: 0 5px;
-    font-size: 16px;
-    transition: transform 0.2s ease;
-}
-
-.copy-button:hover {
-    background: transparent;
-    transform: scale(1.1);
+.modal-content p {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 }
 
 .copy-text {
-    font-family: monospace;
-    background-color: #f0f0f0;
-    padding: 2px 6px;
-    border-radius: 4px;
+    word-break: break-all;
+    flex: 1;
+    min-width: 150px;
 }
 
-.payment-details p {
+.copy-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(233, 144, 117);
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 15px 0;
+    gap: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.copy-button:hover {
+    color: rgb(212, 139, 117);
+}
+
+.copy-button i {
+    font-size: 1rem;
+}
+
+.copy-button span {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 767px) {
+    .copy-button {
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .copy-button i {
+        font-size: 0.9rem;
+    }
+    
+    .copy-button span {
+        font-size: 0.8rem;
+    }
+}
+
+p strong {
+    flex-shrink: 0;
+    margin-right: 10px;
+    min-width: 70px;
+}
+
+@media (max-width: 767px) {
+    .modal-content {
+        padding: 20px;
+        margin: 10px;
+        width: 95%;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem;
+        gap: 5px;
+    }
+
+    .copy-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+    }
 }
 
 .whatsapp-button {
@@ -1043,10 +1095,11 @@ body.modal-open {
     gap: 25px;
 }
 
-.gift-icon img {
+.gift-icon svg {
     width: 60px;
     height: 60px;
-    filter: brightness(0) invert(1);
+    stroke: rgb(233, 144, 117); /* Color coral que combina con el diseño */
+    margin-bottom: 20px;
 }
 
 .gift-text {
@@ -1228,6 +1281,69 @@ body.modal-open {
         text-align: center;
         width: 100%;
         padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gift-icon svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(233, 144, 117);
+}
+
+.modal-content h3 {
+    color: rgb(233, 144, 117);
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 20px;
     }
 }
 

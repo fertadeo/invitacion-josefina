@@ -118,18 +118,16 @@
     <p class="asis-final-date"> Hasta el 10 de Marzo </p>
     <p class="card-price">Valor de la tarjeta: $30.000</p>
     <div class="buttons">
-
-       <a href="https://docs.google.com/forms/d/1IwF-3vJee4IYJNxh-vOO_VT6efA7dqveyG39WvAj2rE/edit" target="_blank"> <button>  Confirmar Asistencia </button>  </a> 
-    
-           </div>
-       </div>
+        <button onclick="openConfirmationModal()">Confirmar Asistencia</button>
     </div>
 </section><!
 
 <!-- Regalo -->
 <section class="gift-section">
     <div class="gift-icon">
-        <img src="./img/icono-regalo.svg" alt="Ícono Regalo">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+        </svg>
     </div>
     <div class="gift-text">
         <p>El mejor regalo es que vengas,</p>
@@ -137,7 +135,7 @@
         <p>¡Muchas gracias!</p>
     </div>
     <div class="gift-button">
-        <button onclick="openPaymentModal()">HACER UN REGALO</button>
+        <button onclick="openGiftModal()">HACER UN REGALO</button>
     </div>
 </section>
 
@@ -155,39 +153,60 @@
     Tu navegador no soporta el elemento de audio.
 </audio>
 
-<!-- Añade esto después del section.asistance -->
-<div id="paymentModal" class="payment-modal" style="display: none;">
-    <div class="payment-content">
-        <button class="close-payment-modal">×</button>
-        <h3>Información de Pago</h3>
-        <div class="payment-details">
-            <p><strong>Titular:</strong> Nieto Yanina Gisela Noemi</p>
-            <p><strong>Banco:</strong> Banco Nación</p>
-            <p><strong>Alias:</strong> <span class="copy-text">yaninagiselanieto</span> 
-                <button class="copy-button" onclick="copyToClipboard('yaninagiselanieto')">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </p>
-            <p><strong>CBU:</strong> <span class="copy-text">0110325830032564972915</span>
-                <button class="copy-button" onclick="copyToClipboard('0110325830032564972915')">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </p>
-            <p><strong>Valor:</strong> $30.000</p>
-        </div>
-        <div class="payment-instructions">
-            <p>Una vez realizado el pago:</p>
-            <p>1. Enviar comprobante al WhatsApp</p>
-            <a href="https://wa.me/543804384354" target="_blank">
-                <button class="whatsapp-button">
-                    <i class="fab fa-whatsapp"></i> Enviar Comprobante
-                </button>
-            </a>
-            <p>2. Completar el formulario de asistencia</p>
-            <a href="https://docs.google.com/forms/d/1j2EjAt7YDrHKglYlLU0Bx1nc0EdcPV5auABBhdV3JPw/" target="_blank">
-                <button>Ir al formulario</button>
-            </a>
-        </div>
+<!-- Modal de Confirmación -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeConfirmationModal()">&times;</span>
+        <h3>Datos para transferencia</h3>
+        
+        <p><strong>Nombre:</strong> Yanina Gisela Nieto</p>
+        
+        <p><strong>Alias:</strong> <span class="copy-text">yaninagiselanieto</span>
+            <button class="copy-button" onclick="copyToClipboard('yaninagiselanieto')">
+                <i class="fas fa-copy"></i>
+                <span>Copiar</span>
+            </button>
+        </p>
+        
+        <p><strong>CBU:</strong> <span class="copy-text">0110325830032564972915</span>
+            <button class="copy-button" onclick="copyToClipboard('0110325830032564972915')">
+                <i class="fas fa-copy"></i>
+                <span>Copiar</span>
+            </button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal de Regalo -->
+<div id="giftModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeGiftModal()">&times;</span>
+        <h3>Datos para transferencia</h3>
+        
+        <p><strong>Nombre:</strong> Morena Josefina Palacio Nieto</p>
+        
+        <p><strong>CVU:</strong> <span class="copy-text">0000003100072697342097</span>
+            <button class="copy-button" onclick="copyToClipboard('0000003100072697342097')">
+                <i class="fas fa-copy"></i>
+                <span>Copiar</span>
+            </button>
+        </p>
+        
+        <p><strong>Alias:</strong> <span class="copy-text">Josefina.palacio1</span>
+            <button class="copy-button" onclick="copyToClipboard('Josefina.palacio1')">
+                <i class="fas fa-copy"></i>
+                <span>Copiar</span>
+            </button>
+        </p>
+        
+        <p><strong>CUIT/CUIL:</strong> <span class="copy-text">27499373002</span>
+            <button class="copy-button" onclick="copyToClipboard('27499373002')">
+                <i class="fas fa-copy"></i>
+                <span>Copiar</span>
+            </button>
+        </p>
+        
+        <p><strong>Plataforma:</strong> Mercado Pago</p>
     </div>
 </div>
 

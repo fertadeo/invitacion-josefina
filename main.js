@@ -265,3 +265,51 @@ function openPaymentModal() {
     modal.style.display = 'flex';
 }
 
+// Obtener los elementos de los modales
+const confirmationModal = document.getElementById("confirmationModal");
+const giftModal = document.getElementById("giftModal");
+
+// Funciones para abrir los modales
+function openConfirmationModal() {
+    confirmationModal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+function openGiftModal() {
+    giftModal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+// Funciones para cerrar los modales
+function closeConfirmationModal() {
+    confirmationModal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+function closeGiftModal() {
+    giftModal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+// Cerrar los modales cuando se hace clic fuera de ellos
+window.onclick = function(event) {
+    if (event.target == confirmationModal) {
+        closeConfirmationModal();
+    }
+    if (event.target == giftModal) {
+        closeGiftModal();
+    }
+}
+
+// Manejar la tecla Escape para ambos modales
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        if (confirmationModal.style.display === "flex") {
+            closeConfirmationModal();
+        }
+        if (giftModal.style.display === "flex") {
+            closeGiftModal();
+        }
+    }
+});
+
