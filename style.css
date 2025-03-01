@@ -45,6 +45,15 @@ html, body {
     font-weight: 400;
 }
 
+.main-title h2{
+    display: flex;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    color: white;
+    margin-top: 30px;
+}
+
 h2{
     color: #fff;
     font-family: 'Dancing Script', cursive;
@@ -316,7 +325,7 @@ button:active {
     justify-content: center;
     width: 100vw;
     height: auto;
-    background-color: rgb(255, 121, 80);
+    background-color: rgb(233, 144, 117);
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -390,7 +399,7 @@ button:active {
 .dress-code{
     margin: 0;
     height: 20vh;
-    background-color: rgb(255, 121, 80);
+    background-color: rgb(233, 144, 117);;
     color: #fff;
 }
 .dress-code p{
@@ -525,7 +534,7 @@ button:active {
         height: auto;
         min-height: 40vh;
         padding: 40px 20px;
-        background-color: rgb(255, 121, 80);
+        background-color: rgb(233, 144, 117);
         color: #fff;
     }
     .dress-code p {
@@ -617,6 +626,8 @@ button:active {
         height: auto;
         min-height: 40vh;
         padding: 40px 20px;
+        background-color: rgb(233, 144, 117);
+        color: #fff;
     }
     .dress-code p {
         font-size: 1rem;
@@ -695,7 +706,7 @@ button:active {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: rgb(255, 121, 80);
+    background-color: rgb(233, 144, 117);
     width: 80px;
     height: 60px;
     border-radius: 30px;
@@ -868,14 +879,18 @@ body.modal-open {
     justify-content: center;
     cursor: pointer;
     z-index: 1002;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-touch-callout: none;
+    outline: none;
 }
 
-.modal-arrow.left {
-    left: 20px;
+.modal-arrow:focus {
+    outline: none;
 }
 
-.modal-arrow.right {
-    right: 20px;
+.modal-arrow:active {
+    background: transparent;
 }
 
 .modal-arrow i {
@@ -1074,22 +1089,51 @@ p strong {
 }
 
 .whatsapp-button {
-    background-color: #25D366 !important; /* Color de WhatsApp */
+    background-color: #25D366 !important;
     border: none !important;
     color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+    margin: 10px auto !important;
+    font-size: 0.9rem !important;
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E !important; /* Color más oscuro al hover */
+    background-color: #128C7E !important;
 }
 
 .whatsapp-button i {
-    margin-right: 8px;
+    font-size: 1.1rem;
 }
 
-/* Estilos específicos para los botones del modal de pago */
-.payment-instructions button:hover {
-    background-color: rgb(233, 144, 117);
+.payment-instructions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-instructions p {
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+.payment-instructions button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .gift-section {
@@ -1102,10 +1146,16 @@ p strong {
     gap: 25px;
 }
 
-.gift-icon svg {
-    width: 60px;
-    height: 60px;
-    stroke: rgb(233, 144, 117); /* Color coral que combina con el diseño */
+.gift-icon-svg {
+    width: 100px;
+    height: 100px;
+    stroke: rgb(233, 144, 117);
+}
+
+.gift-icon {
+    width: 120px;
+    height: 120px;
+    stroke: rgb(233, 144, 117);
     margin-bottom: 20px;
 }
 
@@ -1200,6 +1250,11 @@ p strong {
     button {
         max-width: 100%;
     }
+
+    .gift-icon-svg {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* Media queries for smaller screens (iPhone SE, etc.) */
@@ -1288,21 +1343,65 @@ p strong {
         text-align: center;
         width: 100%;
         padding: 0 10px;
+        color: #fff;
+        background-color: rgb(233, 144, 117);
+    }
+
+
+    .main-title h1{
+        display: flex;
+        font-family: 'Dancing Script', cursive;
+        font-size: 8rem;
+        font-weight: 400;
+    }
+    
+    .main-title h2{
+        display: flex;
+        font-family: 'Dancing Script', cursive;
+        font-size: 3rem;
+        font-weight: 400;
+        position: absolute;
+        top: 400px;
+        font-size: 8rem;
     }
 }
 
 @media (max-width: 768px) {
-    .gift-icon svg {
-        width: 50px;
-        height: 50px;
+    .gift-icon-svg {
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (max-width: 480px) {
-    .gift-icon svg {
-        width: 40px;
-        height: 40px;
+    .gift-icon-svg {
+        width: 100px;
+        height: 100px;
     }
+}
+
+/* Josefina */
+.main-title h1{
+    display: flex;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    position: absolute;
+    top: 150px;
+    font-size: xxx-large;
+
+}
+
+/* Mis 15 */
+.main-title h2{
+    display: flex;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    position: absolute;
+    top: 100px;
+    font-size: xxx-large;
+    
 }
 
 .modal {
@@ -1366,7 +1465,8 @@ p strong {
 @media (max-width: 410px) {
     .portrait {
         background-position: 98% 25%;
-        background-size: 180% auto;
+        background-size: 230% auto;
+        
     }
 }
 
@@ -1375,7 +1475,7 @@ p strong {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(255, 121, 80);
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     animation: fade_move_down 2s ease-in-out infinite;
     cursor: pointer;
@@ -1401,7 +1501,28 @@ p strong {
 @media (max-width: 767px) {
     .scroll-arrow {
         bottom: 30px;
-        font-size: 3rem;
-        color:#fff
+        font-size: 2.5rem;
     }
+}
+
+@media (max-width: 767px) {
+    .main-title h2 {
+        margin-top: 20px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title h2 {
+        margin-top: 15px;
+        font-size: 2rem;
+    }
+}
+
+/* Aplicamos los mismos estilos a los íconos dentro de las flechas */
+.fa-chevron-right,
+.fa-chevron-left {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
