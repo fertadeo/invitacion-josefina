@@ -22,7 +22,8 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 25vh;
     background-image: url("./img/portada.jpeg");
     background-size: cover;
     background-position: 10% center;
@@ -327,12 +328,15 @@ button:active {
    
 
 .portrait{
-    background-position: 85% center;
+    padding-top: 20vh;
+    background-position: 85% 60%;
     background-size: 200% auto;
 }
 .portrait .main-title h1, h2{
     font-size: 5rem;
     margin-top: 5%;
+ 
+    border: none;
 }
 .section-two{
     height: 120vh;
@@ -448,13 +452,14 @@ button:active {
 /* movil */
 @media (max-width: 450px) {
     .portrait {
-        background-position: 90% center;
-        background-size: 250% auto;
+        padding-top: 15vh;
+        background-position: 95% 65%;
+        background-size: 280% auto;
     }
     .portrait .main-title h1, h2{
         font-size: 4rem;
         margin-top: 5%;
-        border:  1px solid;
+        border: none;
     }
     .section-two{
         height: auto;
@@ -567,11 +572,13 @@ button:active {
 
 @media (max-width: 380px) {
     .portrait {
-        background-position: 95% center;
-        background-size: 280% auto;
+        padding-top: 20vh;
+        background-position: 100% 75%;
+        background-size: 320% auto;
     }
     .portrait .main-title h1, h2{
         font-size: 2.5rem;
+        border: none;
     }
     .portrait h3{
         font-size: 1rem;
@@ -1207,7 +1214,7 @@ p strong {
 }
 
 /* Ajustes específicos para dispositivos alrededor de 410px */
-@media (max-width: 410px) {
+@media (max-width: 420px) {
     .portrait {
         background-position: 25% center;
     }
@@ -1347,3 +1354,54 @@ p strong {
     }
 }
 
+
+@media (max-width: 380px) {
+    .portrait {
+        background-position: 100% center;
+        background-size: 320% auto;
+    }
+}
+
+
+@media (max-width: 410px) {
+    .portrait {
+        background-position: 98% 25%;
+        background-size: 180% auto;
+    }
+}
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 121, 80);
+    font-size: 2rem;
+    animation: fade_move_down 2s ease-in-out infinite;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fade_move_down {
+    0% {
+        transform: translate(-50%, -10px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 10px);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .scroll-arrow {
+        bottom: 30px;
+        font-size: 3rem;
+        color:#fff
+    }
+}
